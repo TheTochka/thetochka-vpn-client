@@ -1,3 +1,14 @@
+# TheTochka VPN Client
+
+This public repository hosts the **open VPN client / network engine** used inside **TheTochka VPN: VPN Marketplace**.
+
+- **Open here:** [sing-box for Apple](https://github.com/SagerNet/sing-box-for-apple) (stock upstream sources in this fork) — Libbox / sing-box, **GPLv3**
+- **Not included:** the marketplace app itself (catalog, accounts, payments, backend) — that code is proprietary and private
+
+Project page: https://thetochka.github.io/sing-box-for-apple/
+
+---
+
 # sing-box-for-apple
 
 Experimental iOS/macOS/tvOS client for sing-box, the universal proxy platform.
