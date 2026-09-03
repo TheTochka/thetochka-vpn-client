@@ -18,14 +18,20 @@
 
 ## What this repository is
 
-This is a **public fork of [sing-box for Apple](https://github.com/SagerNet/sing-box-for-apple)** (SFI / SFM / SFT).
+This is a **public fork of [sing-box for Apple](https://github.com/SagerNet/sing-box-for-apple)** (SFI / SFM / SFT), plus TheTochka’s engine overlay used in the App Store binary.
 
 It is the **Corresponding Source** for the open VPN client / network engine shipped inside the TheTochka iOS app. The engine is **Libbox**, built from [sing-box](https://github.com/SagerNet/sing-box).
 
+| App Store | Git |
+| --- | --- |
+| TheTochka `2.0.0` (build `86`) | tag [`v2.0.0+build.86`](https://github.com/TheTochka/thetochka-vpn-client/releases/tag/v2.0.0%2Bbuild.86) |
+
+See [DIFFERENCES.md](DIFFERENCES.md) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Exact tunnel sources: [`TheTochkaEngine/`](TheTochkaEngine/).
+
 | Open in this repo | Not in this repo |
 | --- | --- |
-| Apple client sources (upstream) | TheTochka VPN: VPN Marketplace (catalog, accounts, payments, backend) |
-| Packet Tunnel / Libbox integration from upstream | Proprietary Flutter UI of the marketplace |
+| Apple client sources (upstream) + TheTochka engine overlay | TheTochka VPN: VPN Marketplace (catalog, accounts, payments, backend) |
+| Packet Tunnel / Libbox client library used in the store binary | Proprietary Flutter UI of the marketplace |
 | GPLv3 license and copyright notices | Trademarks, logos, and product branding of TheTochka |
 
 TheTochka is **not affiliated with, endorsed by, or an official product of SagerNet**. This project is independently based on sing-box for Apple.
