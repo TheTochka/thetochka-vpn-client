@@ -6,10 +6,12 @@ TheTochka VPN: VPN Marketplace ships an embedded VPN engine built from **this fo
 
 App Store / TestFlight mapping:
 
-| Marketplace app | This repository |
-| --- | --- |
-| Version `2.0.0` (build `95`) | Git tag `v2.0.0+build.95` |
-| Version `2.0.0` (build `86`) | Git tag `v2.0.0+build.86` |
+| Marketplace app | This repository | Notes |
+| --- | --- | --- |
+| Version `2.0.0` (build `95`) | Git tag `v2.0.0+build.95` | **Current / active** |
+| Version `2.0.0` (build `94`) | Git tag `v2.0.0+build.94` | Intermediate TestFlight |
+| Version `2.0.0` (build `93`) | Git tag `v2.0.0+build.93` | Intermediate TestFlight |
+| Version `2.0.0` (build `86`) | Git tag `v2.0.0+build.86` | Earlier snapshot |
 
 Upstream remains the SagerNet project. TheTochka is not affiliated with or endorsed by SagerNet.
 
