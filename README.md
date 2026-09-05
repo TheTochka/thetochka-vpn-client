@@ -24,7 +24,7 @@ It is the **Corresponding Source** for the open VPN client / network engine ship
 
 | App Store | Git |
 | --- | --- |
-| TheTochka `2.0.0` (build `86`) | tag [`v2.0.0+build.86`](https://github.com/TheTochka/thetochka-vpn-client/releases/tag/v2.0.0%2Bbuild.86) |
+| TheTochka `2.0.0` (build `95`) | tag [`v2.0.0+build.95`](https://github.com/TheTochka/thetochka-vpn-client/releases/tag/v2.0.0%2Bbuild.95) |
 
 See [DIFFERENCES.md](DIFFERENCES.md) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Exact tunnel sources: [`TheTochkaEngine/`](TheTochkaEngine/).
 

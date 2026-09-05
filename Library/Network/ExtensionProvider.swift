@@ -17,6 +17,9 @@ open class ExtensionProvider: NEPacketTunnelProvider {
     public var tunnelOptions: [String: NSObject]?
     private var startOptionsURL: URL?
 
+    // Libbox service (startOrReloadService / openTun) runs ONLY in this NE process.
+    // The host app must not call LibboxNewCommandServer — that would be an in-process proxy.
+
     public struct OverridePreferences {
         public var includeAllNetworks: Bool = false
         public var systemProxyEnabled: Bool = true

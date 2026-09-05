@@ -17,6 +17,9 @@ public enum SingBoxConfigMigrator {
         addDomainResolverToDialFields(&root, resolverTag: resolverTag)
         addDefaultDomainResolverIfNeeded(&root, resolverTag: resolverTag)
         migrateTunStack(&root)
+        // App Review: tunnel traffic must go through NEPacketTunnelProvider only.
+        // Strip socks/http/mixed/redirect inbounds so the main app never runs an in-process proxy.
+        enforcePacketTunnelInboundsOnly(&root)
 
         let migratedData = try JSONSerialization.data(withJSONObject: root, options: [.prettyPrinted, .sortedKeys])
         guard let migrated = String(data: migratedData, encoding: .utf8) else {
@@ -29,6 +32,26 @@ public enum SingBoxConfigMigrator {
             throw error
         }
         return migrated
+    }
+
+    /// Keep only `tun` inbounds. Local SOCKS/HTTP/mixed would look like an in-app proxy to App Review.
+    private static func enforcePacketTunnelInboundsOnly(_ root: inout [String: Any]) {
+        let existing = root["inbounds"] as? [[String: Any]] ?? []
+        var tunOnly = existing.filter { ($0["type"] as? String)?.lowercased() == "tun" }
+        if tunOnly.isEmpty {
+            tunOnly = [
+                [
+                    "type": "tun",
+                    "tag": "tun-in",
+                    "address": ["172.19.0.1/30"],
+                    "mtu": 9000,
+                    "auto_route": true,
+                    "strict_route": true,
+                    "stack": "gvisor",
+                ],
+            ]
+        }
+        root["inbounds"] = tunOnly
     }
 
     private static func migrateLegacyDNS(_ root: inout [String: Any]) {

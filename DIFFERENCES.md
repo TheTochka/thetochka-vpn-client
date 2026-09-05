@@ -4,10 +4,11 @@ This repository is a fork of [sing-box for Apple](https://github.com/SagerNet/si
 
 TheTochka VPN: VPN Marketplace ships an embedded VPN engine built from **this fork**, not from an unmodified upstream checkout. The marketplace app (catalog, accounts, payments, backend) is **not** in this repository.
 
-App Store mapping for this snapshot:
+App Store / TestFlight mapping:
 
 | Marketplace app | This repository |
 | --- | --- |
+| Version `2.0.0` (build `95`) | Git tag `v2.0.0+build.95` |
 | Version `2.0.0` (build `86`) | Git tag `v2.0.0+build.86` |
 
 Upstream remains the SagerNet project. TheTochka is not affiliated with or endorsed by SagerNet.

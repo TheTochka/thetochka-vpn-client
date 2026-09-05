@@ -174,6 +174,8 @@ public class ExtensionProfile: ObservableObject {
         try await connection.fetchLastDisconnectError()
     }
 
+    /// Starts the system Packet Tunnel only (`NETunnelProviderManager` → `NEPacketTunnelProvider`).
+    /// Never starts a local SOCKS/HTTP proxy in the host process.
     public func start() async throws {
         if isMock {
             status = .connecting
